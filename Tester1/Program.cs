@@ -12,7 +12,7 @@ namespace PerformanceTest
     {
         static void Main(string[] args)
         {
-            var count = 10000000;
+            var count = 10000;
 
             ////gdc test (now disabled)
             //string jobId = System.Guid.NewGuid().ToString();
@@ -30,9 +30,9 @@ namespace PerformanceTest
             }
             sw.Stop();
 
-            //Console.WriteLine("{2:N} messages. Time taken: {0:N}ms. {1:N} / sec", sw.Elapsed.TotalMilliseconds,
-            //    ((double)count / sw.Elapsed.TotalMilliseconds) * 1000, count);
-            //Console.ReadKey();
+            Console.WriteLine("{2:N} messages. Time taken: {0:N}ms. {1:N} / sec", sw.Elapsed.TotalMilliseconds,
+                ((double)count / sw.Elapsed.TotalMilliseconds) * 1000, count);
+            Console.ReadKey();
         }
 
         private static void WriteMessages(Logger logger, int count)
