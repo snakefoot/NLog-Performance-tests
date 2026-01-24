@@ -113,7 +113,7 @@ namespace MicrosofLoggingPerformance
                 nlogProvider.Dispose();
             };
             benchmarkTool.ExecuteTest("NLog" + (jsonLogging ? " Json" : "") + (asyncLogging ? " Async" : ""), threadCount, messageCount, nlogMethod, nlogFlushMethod);
-
+            
             Console.WriteLine();
 
             ITextFormatter serilogFormatter = jsonLogging ?
